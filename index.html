@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="https://unpkg.com/destyle.css@4.0.1/destyle.min.css">
+    <title>ポートフォリオ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Hachi+Maru+Pop&family=Rampart+One&display=swap');
+
+        .hachi-maru-pop-regular {
+            font-family: "Hachi Maru Pop", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #myself{
+            width: 100vw;
+            height: 50vh;
+            background-color: khaki;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: darkblue;
+            
+        }
+        #myself h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3.5rem;
+        }
+        #myself p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            color: darkblue;
+        }
+        #works img{
+            width: 25vw;
+
+        }
+        #works{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .intro{
+            transition: all 2s ease-in-out;
+        }
+        #contact{
+            width: 100vw;
+            height: 10vh;
+            background-color: khaki;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+
+        }
+        #works div{
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body class="intro">
+    <section id="myself">
+        <h1 class="hachi-maru-pop-regular">おれまきた</h1>
+        
+        <p class="hachi-maru-pop-regular">【 まきたのポートフォリオ 】</p>
+        
+    </section>
+    <section id="works"></section>
+    <section id="contact">
+        <p>copyright &copy; Makita</p>
+    </section>
+
+    <script>
+        let data =[{
+            img:'a.jpg',
+            des:'あいうえお'
+        },
+        {
+            img:'b.jpg',
+            des:'かきくけこ'
+        },
+        {
+            img:'c.jpg',
+            des:'さしすせそ'
+        }
+        
+    ]
+    const works=document.getElementById('works');
+
+        data.forEach(el=>{
+        let img = document.createElement('img');
+        img.src = el.img;
+        let p = document.createElement('p');
+        p.textContent = el.des;
+        let div = document.createElement('div');
+        document.createElement('div');
+        div.append(img,p);
+        works.append(div);
+        });
+
+        //document.body.append(img,p);
+    </script>
+</body>
+</html>
+
+
